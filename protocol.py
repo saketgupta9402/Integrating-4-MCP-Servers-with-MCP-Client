@@ -1,8 +1,7 @@
-from shared.protocol import QueryType
+from enum import Enum
 
-SERVER_ENDPOINTS = {
-    QueryType.WEATHER: "http://localhost:5002/weather",
-    QueryType.US_TRADING: "http://localhost:5003/us_trading",
-    QueryType.INDIAN_TRADING: "http://localhost:5004/indian_trading",
-    QueryType.FLIGHT_FARES: "http://localhost:5005/flight_fares"
-}
+class QueryType(str, Enum):
+    WEATHER = "weather"
+    US_TRADING = "us_trading"
+    INDIAN_TRADING = "indian_trading"
+    FLIGHT_FARES = "flight_fares"
